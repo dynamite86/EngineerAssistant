@@ -1,0 +1,22 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>res/images/document.png</file>
+        <file>res/images/machine.png</file>
+        <file>res/images/engineer.png</file>
+        <file>res/images/exit.png</file>
+        <file>res/images/info.png</file>
+        <file>res/images/qt-logo.png</file>
+        <file>res/images/add.png</file>
+        <file>res/images/erase.png</file>
+        <file>res/images/save.png</file>
+        <file>res/images/delete.png</file>
+        <file>res/images/filecontents-128.png</file>
+        <file>res/images/print.png</file>
+        <file>res/images/edit.png</file>
+        <file>res/images/subIndex.png</file>
+        <file>res/images/upIndex.png</file>
+    </qresource>
+    <qresource prefix="/html">
+        <file>res/html/MachineAttestationDocumentPattern.html</file>
+    </qresource>
+</RCC>

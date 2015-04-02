@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>machineEditDialog</class>
+ <widget class="QDialog" name="machineEditDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>237</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="3" column="1">
+    <widget class="QComboBox" name="comboBox_operationName">
+     <property name="editable">
+      <bool>true</bool>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <item>
+      <property name="text">
+       <string>Автоматная токарная</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Бесцентрово-шлифовальная</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Внутри-шлифовальная</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Кругло-шлифовальная</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Плоско-шлифовальная</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Вертикально-фрезерная</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Горизонтально-фрезерная</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Токарная с ЧПУ</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Токарно-винторезная</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Токарно-револьверная</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Вертикально-сверлильная</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Настольно-сверлильная</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Резьбонакатная</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Резьбошлифовальная</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="QLabel" name="label_group">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Участок (группа) цеха</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="1">
+    <widget class="QComboBox" name="comboBox_group">
+     <property name="editable">
+      <bool>true</bool>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>5</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="label_inventoryNumber">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Инвентарный номер</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QLineEdit" name="lineEdit_inventoryNumber">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Т-1/1153</string>
+     </property>
+     <property name="cursorPosition">
+      <number>8</number>
+     </property>
+     <property name="readOnly">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QLabel" name="label_numberInPlan">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>№ по графику</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QSpinBox" name="spinBox_numberInPlan">
+     <property name="readOnly">
+      <bool>false</bool>
+     </property>
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <number>999999999</number>
+     </property>
+     <property name="value">
+      <number>4</number>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="label_type">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Тип</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1">
+    <widget class="QLineEdit" name="lineEdit_model">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>1И140П</string>
+     </property>
+     <property name="cursorPosition">
+      <number>6</number>
+     </property>
+     <property name="readOnly">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QComboBox" name="comboBox_type">
+     <property name="editable">
+      <bool>true</bool>
+     </property>
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <item>
+      <property name="text">
+       <string>Автомат токарный многошпиндельный</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Автомат токарный одношпиндельный</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Автомат токарный с ЧПУ</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Бесцентрово-шлифовальный</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Внутри-шлифовальный</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Кругло-шлифовальный</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Плоско-шлифовальный</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Вертикально-фрезерный</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Горизонтально-фрезерный</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Токарно-винторезный</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Токарно-револьверный</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Вертикально-сверлильный</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Настольно-сверлильный</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Резьбонакатной</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Резьбошлифовальный</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="label_operationName">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Наименование операции</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="label_model">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Модель</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="0">
+    <widget class="QPushButton" name="pushButton_cancel">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>Отмена</string>
+     </property>
+     <property name="icon">
+      <iconset resource="resources.qrc">
+       <normaloff>:/images/res/images/delete.png</normaloff>:/images/res/images/delete.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>24</width>
+       <height>24</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="1">
+    <widget class="QPushButton" name="pushButton_save">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>32</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>Сохранить</string>
+     </property>
+     <property name="icon">
+      <iconset resource="resources.qrc">
+       <normaloff>:/images/res/images/save.png</normaloff>:/images/res/images/save.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>24</width>
+       <height>24</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

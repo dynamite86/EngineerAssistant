@@ -1,0 +1,1198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mainWindow</class>
+ <widget class="QMainWindow" name="mainWindow">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Помощник инженера</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resources.qrc">
+    <normaloff>:/images/res/images/engineer.png</normaloff>:/images/res/images/engineer.png</iconset>
+  </property>
+  <property name="dockNestingEnabled">
+   <bool>true</bool>
+  </property>
+  <property name="dockOptions">
+   <set>QMainWindow::AllowNestedDocks|QMainWindow::AllowTabbedDocks|QMainWindow::AnimatedDocks</set>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QToolBox" name="toolBox">
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">icon-size: 48px;
+QToolBox::tab:selected
+{
+    font: bold;
+}
+QToolBox::tab
+{
+    font: normal;
+}
+</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <property name="tabSpacing">
+       <number>6</number>
+      </property>
+      <widget class="QWidget" name="page_attestationOfMachines">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>980</width>
+         <height>515</height>
+        </rect>
+       </property>
+       <attribute name="icon">
+        <iconset resource="resources.qrc">
+         <normaloff>:/images/res/images/machine.png</normaloff>:/images/res/images/machine.png</iconset>
+       </attribute>
+       <attribute name="label">
+        <string>Акты аттестации станков</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_9">
+        <item row="1" column="0">
+         <widget class="QGroupBox" name="groupBox_aom_operations">
+          <property name="maximumSize">
+           <size>
+            <width>200</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
+          <property name="title">
+           <string>Операции</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_4">
+           <item row="0" column="0">
+            <widget class="QPushButton" name="pushButton_aom_newRecord">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Создать</string>
+             </property>
+             <property name="icon">
+              <iconset resource="resources.qrc">
+               <normaloff>:/images/res/images/add.png</normaloff>:/images/res/images/add.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>24</width>
+               <height>24</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QPushButton" name="pushButton_aom_editRecord">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Редактировать</string>
+             </property>
+             <property name="icon">
+              <iconset resource="resources.qrc">
+               <normaloff>:/images/res/images/edit.png</normaloff>:/images/res/images/edit.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>24</width>
+               <height>24</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QPushButton" name="pushButton_aom_deleteRecord">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Удалить</string>
+             </property>
+             <property name="icon">
+              <iconset resource="resources.qrc">
+               <normaloff>:/images/res/images/delete.png</normaloff>:/images/res/images/delete.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>24</width>
+               <height>24</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="Line" name="line_aom">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QPushButton" name="pushButton_aom_viewDocument">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Просмотр</string>
+             </property>
+             <property name="icon">
+              <iconset resource="resources.qrc">
+               <normaloff>:/images/res/images/filecontents-128.png</normaloff>:/images/res/images/filecontents-128.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>24</width>
+               <height>24</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QPushButton" name="pushButton_aom_printDocument">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Печать</string>
+             </property>
+             <property name="icon">
+              <iconset resource="resources.qrc">
+               <normaloff>:/images/res/images/print.png</normaloff>:/images/res/images/print.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>24</width>
+               <height>24</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QGroupBox" name="groupBox_aom_filter">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>200</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
+          <property name="title">
+           <string>Фильтр</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_2">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_aom_period">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Период</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QComboBox" name="comboBox_aom_period">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <item>
+              <property name="text">
+               <string>Весь год</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Январь</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Февраль</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Март</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Апрель</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Май</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Июнь</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Июль</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Август</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Сентябрь</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Октябрь</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Ноябрь</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Декабрь</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QComboBox" name="comboBox_aom_group">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <item>
+              <property name="text">
+               <string>Все</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>1</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>2</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>3</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>4</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>5</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_aom_group">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Участок</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <spacer name="verticalSpacer">
+          <property name="font">
+           <font>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>61</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="1" rowspan="3">
+         <widget class="myTableWidget" name="tableWidget_aom_machinesTable">
+          <property name="font">
+           <font>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
+          <property name="editTriggers">
+           <set>QAbstractItemView::NoEditTriggers</set>
+          </property>
+          <property name="alternatingRowColors">
+           <bool>true</bool>
+          </property>
+          <property name="selectionMode">
+           <enum>QAbstractItemView::SingleSelection</enum>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+          <attribute name="horizontalHeaderDefaultSectionSize">
+           <number>150</number>
+          </attribute>
+          <attribute name="horizontalHeaderStretchLastSection">
+           <bool>true</bool>
+          </attribute>
+          <row>
+           <property name="text">
+            <string>1</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>2</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>3</string>
+           </property>
+          </row>
+          <column>
+           <property name="text">
+            <string>№ по графику</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Инв. №</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Тип</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Участок</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Статус станка</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Аттестован</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Дата очередной аттестации</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Копия утвержденного документа</string>
+           </property>
+          </column>
+          <item row="0" column="0">
+           <property name="text">
+            <string>1</string>
+           </property>
+          </item>
+          <item row="0" column="1">
+           <property name="text">
+            <string>Т-1/2522</string>
+           </property>
+          </item>
+          <item row="0" column="2">
+           <property name="text">
+            <string>Токарно-винторезный</string>
+           </property>
+          </item>
+          <item row="0" column="3">
+           <property name="text">
+            <string>3</string>
+           </property>
+          </item>
+          <item row="0" column="4">
+           <property name="text">
+            <string>Функционирует</string>
+           </property>
+          </item>
+          <item row="0" column="5">
+           <property name="text">
+            <string>да</string>
+           </property>
+          </item>
+          <item row="0" column="6">
+           <property name="text">
+            <string>май 2015</string>
+           </property>
+          </item>
+          <item row="0" column="7">
+           <property name="text">
+            <string>недоступно</string>
+           </property>
+          </item>
+          <item row="1" column="0">
+           <property name="text">
+            <string>2</string>
+           </property>
+          </item>
+          <item row="1" column="1">
+           <property name="text">
+            <string>Ш-6/101</string>
+           </property>
+          </item>
+          <item row="1" column="2">
+           <property name="text">
+            <string>Бесцентрово-шлифовальный</string>
+           </property>
+          </item>
+          <item row="1" column="3">
+           <property name="text">
+            <string>2</string>
+           </property>
+          </item>
+          <item row="1" column="4">
+           <property name="text">
+            <string>Ремонт</string>
+           </property>
+          </item>
+          <item row="1" column="5">
+           <property name="text">
+            <string>недоступно</string>
+           </property>
+          </item>
+          <item row="1" column="6">
+           <property name="text">
+            <string>недоступно</string>
+           </property>
+          </item>
+          <item row="1" column="7">
+           <property name="text">
+            <string>недоступно</string>
+           </property>
+          </item>
+          <item row="2" column="0">
+           <property name="text">
+            <string>3</string>
+           </property>
+          </item>
+          <item row="2" column="1">
+           <property name="text">
+            <string>Ф-2/207</string>
+           </property>
+          </item>
+          <item row="2" column="2">
+           <property name="text">
+            <string>Горизонтально-фрезерный</string>
+           </property>
+          </item>
+          <item row="2" column="3">
+           <property name="text">
+            <string>7</string>
+           </property>
+          </item>
+          <item row="2" column="4">
+           <property name="text">
+            <string>Функционирует</string>
+           </property>
+          </item>
+          <item row="2" column="5">
+           <property name="text">
+            <string>нет</string>
+           </property>
+          </item>
+          <item row="2" column="6">
+           <property name="text">
+            <string>декабрь 2014</string>
+           </property>
+          </item>
+          <item row="2" column="7">
+           <property name="text">
+            <string>недоступно</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_cardsOfHarmonization">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>980</width>
+         <height>515</height>
+        </rect>
+       </property>
+       <attribute name="icon">
+        <iconset resource="resources.qrc">
+         <normaloff>:/images/res/images/document.png</normaloff>:/images/res/images/document.png</iconset>
+       </attribute>
+       <attribute name="label">
+        <string>Карты согласований</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_8">
+        <item row="1" column="0">
+         <widget class="QGroupBox" name="groupBox_coh_operations">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>200</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
+          <property name="title">
+           <string>Операции</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_5">
+           <item row="0" column="0">
+            <widget class="QPushButton" name="pushButton_coh_newRecord">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Создать</string>
+             </property>
+             <property name="icon">
+              <iconset resource="resources.qrc">
+               <normaloff>:/images/res/images/add.png</normaloff>:/images/res/images/add.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>24</width>
+               <height>24</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QPushButton" name="pushButton_coh_editRecord">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Редактировать</string>
+             </property>
+             <property name="icon">
+              <iconset resource="resources.qrc">
+               <normaloff>:/images/res/images/edit.png</normaloff>:/images/res/images/edit.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>24</width>
+               <height>24</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QPushButton" name="pushButton_coh_deleteRecord">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Удалить</string>
+             </property>
+             <property name="icon">
+              <iconset resource="resources.qrc">
+               <normaloff>:/images/res/images/delete.png</normaloff>:/images/res/images/delete.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>24</width>
+               <height>24</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="Line" name="line_coh">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QPushButton" name="pushButton_coh_viewDocument">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Просмотр</string>
+             </property>
+             <property name="icon">
+              <iconset resource="resources.qrc">
+               <normaloff>:/images/res/images/filecontents-128.png</normaloff>:/images/res/images/filecontents-128.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>24</width>
+               <height>24</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QPushButton" name="pushButton_coh_printDocument">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Печать</string>
+             </property>
+             <property name="icon">
+              <iconset resource="resources.qrc">
+               <normaloff>:/images/res/images/print.png</normaloff>:/images/res/images/print.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>24</width>
+               <height>24</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QGroupBox" name="groupBox_coh_filter">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>200</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
+          <property name="title">
+           <string>Фильтр</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_6">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_coh_detail">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Деталь</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_coh_workshop">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Смежный цех</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QComboBox" name="comboBox_coh_workshop">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <item>
+              <property name="text">
+               <string>Все</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>9</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>15</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>17</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>27</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>117</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Мех. лаб.</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QComboBox" name="comboBox_coh_developer">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <item>
+              <property name="text">
+               <string>Мельничук Е.В.</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Петров П.П.</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Иванов И.И.</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Сидоров С.С.</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="label_coh_developer">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Разработчик</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QComboBox" name="comboBox_coh_detal">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <item>
+              <property name="text">
+               <string>Все</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>99.04.81.007 - Болт</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <spacer name="verticalSpacer_2">
+          <property name="font">
+           <font>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>178</width>
+            <height>87</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="1" rowspan="3">
+         <widget class="myTableWidget" name="tableWidget_coh_cardsOfHarmonizationTable">
+          <property name="font">
+           <font>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
+          <property name="editTriggers">
+           <set>QAbstractItemView::NoEditTriggers</set>
+          </property>
+          <property name="alternatingRowColors">
+           <bool>true</bool>
+          </property>
+          <property name="selectionMode">
+           <enum>QAbstractItemView::SingleSelection</enum>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+          <attribute name="horizontalHeaderDefaultSectionSize">
+           <number>150</number>
+          </attribute>
+          <attribute name="horizontalHeaderStretchLastSection">
+           <bool>true</bool>
+          </attribute>
+          <row>
+           <property name="text">
+            <string>1</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>2</string>
+           </property>
+          </row>
+          <column>
+           <property name="text">
+            <string>Деталь</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Смежный цех</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Вид работы</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Разработчик</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Дата разработки</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Согласовал</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Дата согласования</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Копия утвержденного документа</string>
+           </property>
+          </column>
+          <item row="0" column="0">
+           <property name="text">
+            <string>6-26Ц ОСТ 1 31807-80 - Шпилька</string>
+           </property>
+          </item>
+          <item row="0" column="1">
+           <property name="text">
+            <string>15</string>
+           </property>
+          </item>
+          <item row="0" column="2">
+           <property name="text">
+            <string>Термообработка</string>
+           </property>
+          </item>
+          <item row="0" column="3">
+           <property name="text">
+            <string>Мельничук Е.В.</string>
+           </property>
+          </item>
+          <item row="0" column="4">
+           <property name="text">
+            <string>29.10.2014</string>
+           </property>
+          </item>
+          <item row="0" column="5">
+           <property name="text">
+            <string>Петров П.П.</string>
+           </property>
+          </item>
+          <item row="0" column="6">
+           <property name="text">
+            <string>30.10.2014</string>
+           </property>
+          </item>
+          <item row="0" column="7">
+           <property name="text">
+            <string>недоступно</string>
+           </property>
+          </item>
+          <item row="1" column="0">
+           <property name="text">
+            <string>6-26Ц ОСТ 1 31807-80 - Шпилька</string>
+           </property>
+          </item>
+          <item row="1" column="1">
+           <property name="text">
+            <string>Мех. лаб.</string>
+           </property>
+          </item>
+          <item row="1" column="2">
+           <property name="text">
+            <string>Испытания на разрыв</string>
+           </property>
+          </item>
+          <item row="1" column="3">
+           <property name="text">
+            <string>Мельничук Е.В.</string>
+           </property>
+          </item>
+          <item row="1" column="4">
+           <property name="text">
+            <string>01.09.2014</string>
+           </property>
+          </item>
+          <item row="1" column="5">
+           <property name="text">
+            <string>Иванов И.И.</string>
+           </property>
+          </item>
+          <item row="1" column="6">
+           <property name="text">
+            <string>14.10.2014</string>
+           </property>
+          </item>
+          <item row="1" column="7">
+           <property name="text">
+            <string>недоступно</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1000</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_tools">
+    <property name="title">
+     <string>Инструменты</string>
+    </property>
+    <addaction name="action_attestationOfMachines"/>
+    <addaction name="action_soglasovaniya"/>
+   </widget>
+   <widget class="QMenu" name="menu_help">
+    <property name="title">
+     <string>Справка</string>
+    </property>
+    <addaction name="action_about"/>
+    <addaction name="action_aboutQt"/>
+   </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Файл</string>
+    </property>
+    <addaction name="action_exit"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_tools"/>
+   <addaction name="menu_help"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="action_exit">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/images/res/images/exit.png</normaloff>:/images/res/images/exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Выход</string>
+   </property>
+  </action>
+  <action name="action_attestationOfMachines">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/images/res/images/machine.png</normaloff>:/images/res/images/machine.png</iconset>
+   </property>
+   <property name="text">
+    <string>Акты аттестации станков</string>
+   </property>
+  </action>
+  <action name="action_soglasovaniya">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/images/res/images/document.png</normaloff>:/images/res/images/document.png</iconset>
+   </property>
+   <property name="text">
+    <string>Карты согласований</string>
+   </property>
+  </action>
+  <action name="action_aboutQt">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/images/res/images/qt-logo.png</normaloff>:/images/res/images/qt-logo.png</iconset>
+   </property>
+   <property name="text">
+    <string>О библиотеке Qt...</string>
+   </property>
+  </action>
+  <action name="action_about">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/images/res/images/info.png</normaloff>:/images/res/images/info.png</iconset>
+   </property>
+   <property name="text">
+    <string>О программе...</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>myTableWidget</class>
+   <extends>QTableWidget</extends>
+   <header>myTableWidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
