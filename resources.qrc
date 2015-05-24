@@ -15,6 +15,7 @@
         <file>res/images/edit.png</file>
         <file>res/images/subIndex.png</file>
         <file>res/images/upIndex.png</file>
+        <file>res/images/search.png</file>
     </qresource>
     <qresource prefix="/html">
         <file>res/html/MachineAttestationDocumentPattern.html</file>

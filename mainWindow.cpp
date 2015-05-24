@@ -1,7 +1,7 @@
 ﻿#include "mainWindow.h"
 #include "ui_mainWindow.h"
 
-void mainWindow::pInitControls()
+void mainWindow::m_initControls()
 {
     ui->tableWidget_aom_machinesTable->setRowsAutoResize(true);
     ui->tableWidget_aom_machinesTable->setColumnsAutoResize(true);
@@ -10,33 +10,37 @@ void mainWindow::pInitControls()
     ui->toolBox->setCurrentIndex(0);
 }
 
-void mainWindow::pInitStatusBar()
+void mainWindow::m_initStatusBar()
 {
-    pWorkshop        = new QLabel(ui->statusBar);
-    pUserName        = new QLabel(ui->statusBar);
-    pConnectionState = new QLabel(ui->statusBar);
+    m_workshop        = new QLabel(ui->statusBar);
+    m_userName        = new QLabel(ui->statusBar);
+    m_userGroup       = new QLabel(ui->statusBar);
+    m_connectionState = new QLabel(ui->statusBar);
 
-    ui->statusBar->addPermanentWidget(pWorkshop,        1);
-    ui->statusBar->addPermanentWidget(pUserName,        1);
-    ui->statusBar->addPermanentWidget(pConnectionState, 1);
+    ui->statusBar->addPermanentWidget(m_workshop,        1);
+    ui->statusBar->addPermanentWidget(m_userName,        1);
+    ui->statusBar->addPermanentWidget(m_userGroup,        1);
+    ui->statusBar->addPermanentWidget(m_connectionState, 1);
 
-    pWorkshop->setText("Цех: <b>8</b>");
-    pUserName->setText("Пользователь: <b>Мельничук Евгений Валерьевич</b>");
-    pConnectionState->setText("Соединение с сервером: <b>установлено</b>");
+    m_workshop->setText("Цех: <b>8</b>");
+    m_userName->setText("Пользователь: <b>Мельничук Евгений Валерьевич</b>");
+    m_userGroup->setText("Группа: <b>администраторы</b>");
+    m_connectionState->setText("Соединение с сервером: <b>установлено</b>");
 }
 
 mainWindow::mainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::mainWindow)
 {
     ui->setupUi(this);
-    pInitControls();
-    pInitStatusBar();
+    m_initControls();
+    m_initStatusBar();
 }
 
 mainWindow::~mainWindow()
 {
-    delete pConnectionState;
-    delete pUserName;
-    delete pWorkshop;
+    delete m_connectionState;
+    delete m_userGroup;
+    delete m_userName;
+    delete m_workshop;
     delete ui;
 }
 
@@ -51,7 +55,7 @@ void mainWindow::on_action_soglasovaniya_triggered()
 
 void mainWindow::on_pushButton_aom_newRecord_clicked()
 {
-    createNewAttestationDocumentDialog createAttestationDocument(this);
+    AttestationDocumentDialog createAttestationDocument(this);
     createAttestationDocument.exec();
 }
 

@@ -54,7 +54,7 @@ QToolBox::tab
        <enum>QFrame::Sunken</enum>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <property name="tabSpacing">
        <number>6</number>
@@ -92,7 +92,7 @@ QToolBox::tab
           <property name="title">
            <string>Операции</string>
           </property>
-          <layout class="QGridLayout" name="gridLayout_4">
+          <layout class="QGridLayout" name="gridLayout_3">
            <item row="0" column="0">
             <widget class="QPushButton" name="pushButton_aom_newRecord">
              <property name="font">
@@ -206,6 +206,29 @@ QToolBox::tab
              <property name="icon">
               <iconset resource="resources.qrc">
                <normaloff>:/images/res/images/print.png</normaloff>:/images/res/images/print.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>24</width>
+               <height>24</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0">
+            <widget class="QPushButton" name="pushButton_aom_search">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Поиск</string>
+             </property>
+             <property name="icon">
+              <iconset resource="resources.qrc">
+               <normaloff>:/images/res/images/search.png</normaloff>:/images/res/images/search.png</iconset>
              </property>
              <property name="iconSize">
               <size>
@@ -418,6 +441,9 @@ QToolBox::tab
           <property name="selectionBehavior">
            <enum>QAbstractItemView::SelectRows</enum>
           </property>
+          <property name="wordWrap">
+           <bool>false</bool>
+          </property>
           <attribute name="horizontalHeaderDefaultSectionSize">
            <number>150</number>
           </attribute>
@@ -471,7 +497,17 @@ QToolBox::tab
           </column>
           <column>
            <property name="text">
+            <string>Дата проведенной аттестации</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
             <string>Дата очередной аттестации</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Статус документа</string>
            </property>
           </column>
           <column>
@@ -511,10 +547,20 @@ QToolBox::tab
           </item>
           <item row="0" column="6">
            <property name="text">
-            <string>май 2015</string>
+            <string>11.04.2014</string>
            </property>
           </item>
           <item row="0" column="7">
+           <property name="text">
+            <string>май 2015</string>
+           </property>
+          </item>
+          <item row="0" column="8">
+           <property name="text">
+            <string>на утверждении</string>
+           </property>
+          </item>
+          <item row="0" column="9">
            <property name="text">
             <string>недоступно</string>
            </property>
@@ -546,7 +592,7 @@ QToolBox::tab
           </item>
           <item row="1" column="5">
            <property name="text">
-            <string>недоступно</string>
+            <string>нет</string>
            </property>
           </item>
           <item row="1" column="6">
@@ -555,6 +601,11 @@ QToolBox::tab
            </property>
           </item>
           <item row="1" column="7">
+           <property name="text">
+            <string>недоступно</string>
+           </property>
+          </item>
+          <item row="1" column="9">
            <property name="text">
             <string>недоступно</string>
            </property>
@@ -581,7 +632,7 @@ QToolBox::tab
           </item>
           <item row="2" column="4">
            <property name="text">
-            <string>Функционирует</string>
+            <string>Консервация</string>
            </property>
           </item>
           <item row="2" column="5">
@@ -591,10 +642,15 @@ QToolBox::tab
           </item>
           <item row="2" column="6">
            <property name="text">
-            <string>декабрь 2014</string>
+            <string>недоступно</string>
            </property>
           </item>
           <item row="2" column="7">
+           <property name="text">
+            <string>недоступно</string>
+           </property>
+          </item>
+          <item row="2" column="9">
            <property name="text">
             <string>недоступно</string>
            </property>
@@ -756,6 +812,29 @@ QToolBox::tab
              <property name="icon">
               <iconset resource="resources.qrc">
                <normaloff>:/images/res/images/print.png</normaloff>:/images/res/images/print.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>24</width>
+               <height>24</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0">
+            <widget class="QPushButton" name="pushButton_coh_search">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Поиск</string>
+             </property>
+             <property name="icon">
+              <iconset resource="resources.qrc">
+               <normaloff>:/images/res/images/search.png</normaloff>:/images/res/images/search.png</iconset>
              </property>
              <property name="iconSize">
               <size>
@@ -1012,6 +1091,11 @@ QToolBox::tab
           </column>
           <column>
            <property name="text">
+            <string>Статус документа</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
             <string>Копия утвержденного документа</string>
            </property>
           </column>
@@ -1052,6 +1136,11 @@ QToolBox::tab
           </item>
           <item row="0" column="7">
            <property name="text">
+            <string>утвержден</string>
+           </property>
+          </item>
+          <item row="0" column="8">
+           <property name="text">
             <string>недоступно</string>
            </property>
           </item>
@@ -1091,6 +1180,11 @@ QToolBox::tab
            </property>
           </item>
           <item row="1" column="7">
+           <property name="text">
+            <string>утвержден</string>
+           </property>
+          </item>
+          <item row="1" column="8">
            <property name="text">
             <string>недоступно</string>
            </property>

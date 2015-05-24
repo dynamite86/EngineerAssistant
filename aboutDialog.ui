@@ -58,7 +58,7 @@
    <item row="0" column="1">
     <widget class="QLabel" name="label">
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Помощник инженера 0.2[Alpha] (02.04.2015)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Автор:&lt;/span&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt; Мельничук Е.В., 2014...2015.&lt;/span&gt;&lt;br/&gt;&lt;br/&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Программа предназначена для оформления, учета и хранения технологической документации:&lt;/span&gt;&lt;br/&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;● акты аттестации станков на технологическую точность;&lt;br/&gt;● карты согласований со смежными цехами.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Помощник инженера 0.2[Alpha] (24.05.2015)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Автор:&lt;/span&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt; Мельничук Е.В., 2014...2015.&lt;/span&gt;&lt;br/&gt;&lt;br/&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Программа предназначена для оформления, учета и хранения технологической документации:&lt;/span&gt;&lt;br/&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;● акты аттестации станков на технологическую точность;&lt;br/&gt;● карты согласований со смежными цехами.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>

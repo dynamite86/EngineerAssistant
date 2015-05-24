@@ -1,7 +1,7 @@
-#include "createNewAttestationDocumentDialog.h"
-#include "ui_createNewAttestationDocumentDialog.h"
+#include "AttestationDocumentDialog.h"
+#include "ui_AttestationDocumentDialog.h"
 
-createNewAttestationDocumentDialog::createNewAttestationDocumentDialog(QWidget *parent) : QDialog(parent), ui(new Ui::createNewAttestationDocumentDialog)
+AttestationDocumentDialog::AttestationDocumentDialog(QWidget *parent) : QDialog(parent), ui(new Ui::AttestationDocumentDialog)
 {
     ui->setupUi(this);
 
@@ -48,7 +48,7 @@ createNewAttestationDocumentDialog::createNewAttestationDocumentDialog(QWidget *
     connect(ui->toolButton_detailName,  SIGNAL(clicked()), this, SLOT(m_slotChooseDetail()));
 }
 
-createNewAttestationDocumentDialog::~createNewAttestationDocumentDialog()
+AttestationDocumentDialog::~AttestationDocumentDialog()
 {
     delete m_detailsDialog;
     delete m_machinesDialog;
@@ -56,12 +56,17 @@ createNewAttestationDocumentDialog::~createNewAttestationDocumentDialog()
     delete ui;
 }
 
-bool createNewAttestationDocumentDialog::m_isLineEdit(const QWidget *widget)
+bool AttestationDocumentDialog::initEditor(const AttestationDocumentWorkingResume workingResume, const QString detailDesignation, const QString detailName)
+{
+    
+}
+
+bool AttestationDocumentDialog::m_isLineEdit(const QWidget *widget)
 {
    return dynamic_cast<const OneLineTextEdit*>(widget) != 0;
 }
 
-void createNewAttestationDocumentDialog::m_focusChanged(QWidget *last, QWidget *current)
+void AttestationDocumentDialog::m_focusChanged(QWidget *last, QWidget *current)
 {
     if(m_isLineEdit(last)&&(last != current))
     {
@@ -75,7 +80,7 @@ void createNewAttestationDocumentDialog::m_focusChanged(QWidget *last, QWidget *
     m_lastActiveWidgetIsLineEdit = false;
 }
 
-void createNewAttestationDocumentDialog::m_printerWasSelected(QPrinter *printer)
+void AttestationDocumentDialog::m_printerWasSelected(QPrinter *printer)
 {
 //    QTextDocument document;
     if(printer->isValid()){
@@ -92,49 +97,49 @@ void createNewAttestationDocumentDialog::m_printerWasSelected(QPrinter *printer)
     this->accept();
 }
 
-void createNewAttestationDocumentDialog::on_checkBox_1factParam_clicked(bool checked)
+void AttestationDocumentDialog::on_checkBox_1factParam_clicked(bool checked)
 {
     ui->checkBox_1controlledParam->setChecked(checked);
     ui->textEdit_1factParam->setEnabled(checked);
     ui->textEdit_1controlledParam->setEnabled(checked);
 }
 
-void createNewAttestationDocumentDialog::on_checkBox_2factParam_clicked(bool checked)
+void AttestationDocumentDialog::on_checkBox_2factParam_clicked(bool checked)
 {
     ui->checkBox_2controlledParam->setChecked(checked);
     ui->textEdit_2factParam->setEnabled(checked);
     ui->textEdit_2controlledParam->setEnabled(checked);
 }
 
-void createNewAttestationDocumentDialog::on_checkBox_3factParam_clicked(bool checked)
+void AttestationDocumentDialog::on_checkBox_3factParam_clicked(bool checked)
 {
     ui->checkBox_3controlledParam->setChecked(checked);
     ui->textEdit_3factParam->setEnabled(checked);
     ui->textEdit_3controlledParam->setEnabled(checked);
 }
 
-void createNewAttestationDocumentDialog::on_checkBox_1controlledParam_clicked(bool checked)
+void AttestationDocumentDialog::on_checkBox_1controlledParam_clicked(bool checked)
 {
     ui->checkBox_1factParam->setChecked(checked);
     ui->textEdit_1factParam->setEnabled(checked);
     ui->textEdit_1controlledParam->setEnabled(checked);
 }
 
-void createNewAttestationDocumentDialog::on_checkBox_2controlledParam_clicked(bool checked)
+void AttestationDocumentDialog::on_checkBox_2controlledParam_clicked(bool checked)
 {
     ui->checkBox_2factParam->setChecked(checked);
     ui->textEdit_2factParam->setEnabled(checked);
     ui->textEdit_2controlledParam->setEnabled(checked);
 }
 
-void createNewAttestationDocumentDialog::on_checkBox_3controlledParam_clicked(bool checked)
+void AttestationDocumentDialog::on_checkBox_3controlledParam_clicked(bool checked)
 {
     ui->checkBox_3factParam->setChecked(checked);
     ui->textEdit_3factParam->setEnabled(checked);
     ui->textEdit_3controlledParam->setEnabled(checked);
 }
 
-void createNewAttestationDocumentDialog::on_pushButton_save_clicked()
+void AttestationDocumentDialog::on_pushButton_save_clicked()
 {
     if(ui->checkBox_doPrint->isChecked())
     {
@@ -180,12 +185,12 @@ void createNewAttestationDocumentDialog::on_pushButton_save_clicked()
     this->accept();
 }
 
-void createNewAttestationDocumentDialog::on_pushButton_cancel_clicked()
+void AttestationDocumentDialog::on_pushButton_cancel_clicked()
 {
     this->reject();
 }
 
-void createNewAttestationDocumentDialog::on_toolButton_degreeSymbol_clicked()
+void AttestationDocumentDialog::on_toolButton_degreeSymbol_clicked()
 {
     if(m_lastActiveWidgetIsLineEdit)
     {
@@ -193,7 +198,7 @@ void createNewAttestationDocumentDialog::on_toolButton_degreeSymbol_clicked()
     }
 }
 
-void createNewAttestationDocumentDialog::on_toolButton_multiplicationSymbol_clicked()
+void AttestationDocumentDialog::on_toolButton_multiplicationSymbol_clicked()
 {
     if(m_lastActiveWidgetIsLineEdit)
     {
@@ -201,7 +206,7 @@ void createNewAttestationDocumentDialog::on_toolButton_multiplicationSymbol_clic
     }
 }
 
-void createNewAttestationDocumentDialog::on_toolButton_plusMinusSymbol_clicked()
+void AttestationDocumentDialog::on_toolButton_plusMinusSymbol_clicked()
 {
     if(m_lastActiveWidgetIsLineEdit)
     {
@@ -209,7 +214,7 @@ void createNewAttestationDocumentDialog::on_toolButton_plusMinusSymbol_clicked()
     }
 }
 
-void createNewAttestationDocumentDialog::on_toolButton_diameterSymbol_clicked()
+void AttestationDocumentDialog::on_toolButton_diameterSymbol_clicked()
 {
     if(m_lastActiveWidgetIsLineEdit)
     {
@@ -217,7 +222,7 @@ void createNewAttestationDocumentDialog::on_toolButton_diameterSymbol_clicked()
     }
 }
 
-void createNewAttestationDocumentDialog::on_toolButton_lowerIndex_clicked()
+void AttestationDocumentDialog::on_toolButton_lowerIndex_clicked()
 {
     bool isOk = false;
     QString lowerIndex;
@@ -231,7 +236,7 @@ void createNewAttestationDocumentDialog::on_toolButton_lowerIndex_clicked()
     }
 }
 
-void createNewAttestationDocumentDialog::on_toolButton_upperIndex_clicked()
+void AttestationDocumentDialog::on_toolButton_upperIndex_clicked()
 {
     bool isOk = false;
     QString upperIndex;
@@ -245,22 +250,22 @@ void createNewAttestationDocumentDialog::on_toolButton_upperIndex_clicked()
     }
 }
 
-void createNewAttestationDocumentDialog::m_slotChooseMachine()
+void AttestationDocumentDialog::m_slotChooseMachine()
 {
     m_machinesDialog->exec();
 }
 
-void createNewAttestationDocumentDialog::m_slotChooseDetail()
+void AttestationDocumentDialog::m_slotChooseDetail()
 {
     m_detailsDialog->exec();
 }
 
-void createNewAttestationDocumentDialog::m_slotChooseComission()
+void AttestationDocumentDialog::m_slotChooseComission()
 {
 
 }
 
-void createNewAttestationDocumentDialog::m_slotNewMachine(const bool isOk, const int number, const QString inventoryNumber, const QString type, const QString operationName, const QString model, const int group)
+void AttestationDocumentDialog::m_slotNewMachine(const bool isOk, const int number, const QString inventoryNumber, const QString type, const QString operationName, const QString model, const int group)
 {
     if(isOk)
     {
@@ -273,7 +278,7 @@ void createNewAttestationDocumentDialog::m_slotNewMachine(const bool isOk, const
     }
 }
 
-void createNewAttestationDocumentDialog::m_slotNewDetail(const bool isOk, const QString detailDesignation, const QString detailName)
+void AttestationDocumentDialog::m_slotNewDetail(const bool isOk, const QString detailDesignation, const QString detailName)
 {
     if(isOk)
     {
@@ -282,32 +287,32 @@ void createNewAttestationDocumentDialog::m_slotNewDetail(const bool isOk, const 
     }
 }
 
-void createNewAttestationDocumentDialog::on_toolButton_clear1factParam_clicked()
+void AttestationDocumentDialog::on_toolButton_clear1factParam_clicked()
 {
     ui->textEdit_1factParam->clear();
 }
 
-void createNewAttestationDocumentDialog::on_toolButton_clear2factParam_clicked()
+void AttestationDocumentDialog::on_toolButton_clear2factParam_clicked()
 {
     ui->textEdit_2factParam->clear();
 }
 
-void createNewAttestationDocumentDialog::on_toolButton_clear3factParam_clicked()
+void AttestationDocumentDialog::on_toolButton_clear3factParam_clicked()
 {
     ui->textEdit_3factParam->clear();
 }
 
-void createNewAttestationDocumentDialog::on_toolButton_clear1controlledParam_clicked()
+void AttestationDocumentDialog::on_toolButton_clear1controlledParam_clicked()
 {
     ui->textEdit_1controlledParam->clear();
 }
 
-void createNewAttestationDocumentDialog::on_toolButton_clear2controlledParam_clicked()
+void AttestationDocumentDialog::on_toolButton_clear2controlledParam_clicked()
 {
     ui->textEdit_2controlledParam->clear();
 }
 
-void createNewAttestationDocumentDialog::on_toolButton_clear3controlledParam_clicked()
+void AttestationDocumentDialog::on_toolButton_clear3controlledParam_clicked()
 {
     ui->textEdit_3controlledParam->clear();
 }

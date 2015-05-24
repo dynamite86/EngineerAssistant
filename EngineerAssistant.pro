@@ -15,34 +15,35 @@ DESTDIR = $$PWD/test
 SOURCES += main.cpp\
            mainWindow.cpp \
            myTableWidget.cpp \
-           createNewAttestationDocumentDialog.cpp \
            aboutDialog.cpp \
            createNewCardOfHarmonizationDialog.cpp \
            OneLineTextEdit.cpp \
            machinesManagingDialog.cpp \
            detailManagingDialog.cpp \
            machineEditDialog.cpp \
-           detailEditDialog.cpp
+           detailEditDialog.cpp \
+           AttestationDocumentDialog.cpp
 
 HEADERS  += mainWindow.h \
             myTableWidget.h \
-            createNewAttestationDocumentDialog.h \
             aboutDialog.h \
             createNewCardOfHarmonizationDialog.h \
             OneLineTextEdit.h \
             machinesManagingDialog.h \
             detailManagingDialog.h \
             machineEditDialog.h \
-            detailEditDialog.h
+            detailEditDialog.h \
+            AttestationDocumentDialog.h \
+            version.h
 
 FORMS    += mainWindow.ui \
-            createNewAttestationDocumentDialog.ui \
             aboutDialog.ui \
             createNewCardOfHarmonizationDialog.ui \
             machinesManagingDialog.ui \
             detailManagingDialog.ui \
             machineEditDialog.ui \
-            detailEditDialog.ui
+            detailEditDialog.ui \
+            AttestationDocumentDialog.ui
 
 RESOURCES += resources.qrc
 

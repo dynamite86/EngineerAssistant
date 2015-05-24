@@ -14,16 +14,23 @@
 #include "detailManagingDialog.h"
 
 namespace Ui {
-class createNewAttestationDocumentDialog;
+class AttestationDocumentDialog;
 }
 
-class createNewAttestationDocumentDialog : public QDialog
+enum  AttestationDocumentWorkingResume{
+    newAttestationDocument,
+    existingAttestationDocument
+};
+
+class AttestationDocumentDialog : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit createNewAttestationDocumentDialog(QWidget *parent = 0);
-    ~createNewAttestationDocumentDialog();
+    explicit AttestationDocumentDialog(QWidget *parent = 0);
+    ~AttestationDocumentDialog();
+
+    bool initEditor(const AttestationDocumentWorkingResume workingResume = newAttestationDocument, const QString detailDesignation = QString(), const QString detailName = QString());
 
 private slots:
     void m_focusChanged(QWidget *last, QWidget *current);
@@ -63,7 +70,7 @@ private slots:
     void m_slotNewDetail(const bool isOk, const QString detailDesignation, const QString detailName);
 
 private:
-    Ui::createNewAttestationDocumentDialog *ui;
+    Ui::AttestationDocumentDialog *ui;
 
     machinesManagingDialog *m_machinesDialog;
     detailManagingDialog *m_detailsDialog;

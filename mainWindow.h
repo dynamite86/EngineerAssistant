@@ -8,7 +8,7 @@
 #include <QtGui>
 #include <QStyleFactory>
 #include "myTableWidget.h"
-#include "createNewAttestationDocumentDialog.h"
+#include "AttestationDocumentDialog.h"
 #include "createNewCardOfHarmonizationDialog.h"
 #include "aboutDialog.h"
 
@@ -43,12 +43,13 @@ private slots:
 
 private:
     Ui::mainWindow *ui;
-    QLabel         *pWorkshop;
-    QLabel         *pUserName;
-    QLabel         *pConnectionState;
+    QLabel         *m_workshop;
+    QLabel         *m_userName;
+    QLabel         *m_userGroup;
+    QLabel         *m_connectionState;
 
-    void pInitControls();
-    void pInitStatusBar();
+    void m_initControls();
+    void m_initStatusBar();
 };
 
 #endif // MAINWINDOW_H
