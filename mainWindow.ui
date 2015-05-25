@@ -350,6 +350,18 @@ QToolBox::tab
              </item>
             </widget>
            </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_aom_group">
+             <property name="font">
+              <font>
+               <pointsize>8</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Участок</string>
+             </property>
+            </widget>
+           </item>
            <item row="3" column="0">
             <widget class="QComboBox" name="comboBox_aom_group">
              <property name="font">
@@ -389,16 +401,101 @@ QToolBox::tab
              </item>
             </widget>
            </item>
-           <item row="2" column="0">
-            <widget class="QLabel" name="label_aom_group">
-             <property name="font">
-              <font>
-               <pointsize>8</pointsize>
-              </font>
-             </property>
+           <item row="4" column="0">
+            <widget class="QLabel" name="label">
              <property name="text">
-              <string>Участок</string>
+              <string>Тип</string>
              </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QComboBox" name="comboBox_type">
+             <property name="editable">
+              <bool>false</bool>
+             </property>
+             <property name="currentIndex">
+              <number>0</number>
+             </property>
+             <item>
+              <property name="text">
+               <string>Все</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Автомат токарный многошпиндельный</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Автомат токарный одношпиндельный</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Автомат токарный с ЧПУ</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Бесцентрово-шлифовальный</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Внутри-шлифовальный</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Кругло-шлифовальный</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Плоско-шлифовальный</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Вертикально-фрезерный</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Горизонтально-фрезерный</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Токарно-винторезный</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Токарно-револьверный</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Вертикально-сверлильный</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Настольно-сверлильный</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Резьбонакатной</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Резьбошлифовальный</string>
+              </property>
+             </item>
             </widget>
            </item>
           </layout>
@@ -605,6 +702,11 @@ QToolBox::tab
             <string>недоступно</string>
            </property>
           </item>
+          <item row="1" column="8">
+           <property name="text">
+            <string>недоступно</string>
+           </property>
+          </item>
           <item row="1" column="9">
            <property name="text">
             <string>недоступно</string>
@@ -646,6 +748,11 @@ QToolBox::tab
            </property>
           </item>
           <item row="2" column="7">
+           <property name="text">
+            <string>недоступно</string>
+           </property>
+          </item>
+          <item row="2" column="8">
            <property name="text">
             <string>недоступно</string>
            </property>

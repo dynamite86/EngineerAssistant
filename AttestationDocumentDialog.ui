@@ -6,14 +6,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>700</width>
-    <height>704</height>
+    <width>850</width>
+    <height>700</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>0</width>
-    <height>0</height>
+    <width>850</width>
+    <height>700</height>
    </size>
   </property>
   <property name="maximumSize">
@@ -35,6 +35,178 @@
     <normaloff>:/images/res/images/machine.png</normaloff>:/images/res/images/machine.png</iconset>
   </property>
   <layout class="QGridLayout" name="gridLayout_9">
+   <item row="4" column="1">
+    <widget class="QGroupBox" name="groupBox_completionDocument">
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="title">
+      <string>Завершение создания документа</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_10">
+      <item row="1" column="1">
+       <widget class="QCheckBox" name="checkBox_doPrint">
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>распечатать после сохранения</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QPushButton" name="pushButton_cancel">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>32</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Отменить</string>
+        </property>
+        <property name="icon">
+         <iconset resource="resources.qrc">
+          <normaloff>:/images/res/images/delete.png</normaloff>:/images/res/images/delete.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>24</width>
+          <height>24</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QPushButton" name="pushButton_save">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>32</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Сохранить</string>
+        </property>
+        <property name="icon">
+         <iconset resource="resources.qrc">
+          <normaloff>:/images/res/images/save.png</normaloff>:/images/res/images/save.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>24</width>
+          <height>24</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0" colspan="2">
+       <widget class="QGroupBox" name="groupBox_2">
+        <property name="title">
+         <string>Режим работы</string>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_8">
+         <item row="4" column="1">
+          <widget class="QPushButton" name="pushButton_importFromScaner">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>27</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>со сканера</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0" colspan="2">
+          <widget class="Line" name="line_2">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QPushButton" name="pushButton_importFromFile">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>27</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>из файла</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0" colspan="2">
+          <widget class="QRadioButton" name="radioButton_importExistingDocument">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>27</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>Импорт существующего документа</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QRadioButton" name="radioButton_createNewDocument">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>27</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>Создание нового документа</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
    <item row="0" column="0" rowspan="2">
     <widget class="QGroupBox" name="groupBox_machine">
      <property name="font">
@@ -52,7 +224,7 @@
         <property name="minimumSize">
          <size>
           <width>0</width>
-          <height>0</height>
+          <height>23</height>
          </size>
         </property>
         <property name="font">
@@ -71,7 +243,7 @@
         <property name="minimumSize">
          <size>
           <width>0</width>
-          <height>0</height>
+          <height>23</height>
          </size>
         </property>
         <property name="font">
@@ -90,7 +262,7 @@
         <property name="minimumSize">
          <size>
           <width>0</width>
-          <height>0</height>
+          <height>23</height>
          </size>
         </property>
         <property name="font">
@@ -115,7 +287,7 @@
         <property name="minimumSize">
          <size>
           <width>0</width>
-          <height>0</height>
+          <height>23</height>
          </size>
         </property>
         <property name="font">
@@ -134,7 +306,7 @@
         <property name="minimumSize">
          <size>
           <width>0</width>
-          <height>0</height>
+          <height>23</height>
          </size>
         </property>
         <property name="font">
@@ -154,7 +326,7 @@
         <property name="minimumSize">
          <size>
           <width>0</width>
-          <height>0</height>
+          <height>23</height>
          </size>
         </property>
         <property name="font">
@@ -176,7 +348,7 @@
         <property name="minimumSize">
          <size>
           <width>0</width>
-          <height>0</height>
+          <height>23</height>
          </size>
         </property>
         <property name="font">
@@ -196,7 +368,7 @@
         <property name="minimumSize">
          <size>
           <width>0</width>
-          <height>0</height>
+          <height>23</height>
          </size>
         </property>
         <property name="font">
@@ -221,7 +393,7 @@
         <property name="minimumSize">
          <size>
           <width>0</width>
-          <height>0</height>
+          <height>23</height>
          </size>
         </property>
         <property name="font">
@@ -246,7 +418,7 @@
         <property name="minimumSize">
          <size>
           <width>0</width>
-          <height>0</height>
+          <height>23</height>
          </size>
         </property>
         <property name="font">
@@ -266,7 +438,7 @@
         <property name="minimumSize">
          <size>
           <width>32</width>
-          <height>0</height>
+          <height>23</height>
          </size>
         </property>
         <property name="font">
@@ -285,7 +457,7 @@
         <property name="minimumSize">
          <size>
           <width>32</width>
-          <height>0</height>
+          <height>23</height>
          </size>
         </property>
         <property name="font">
@@ -304,7 +476,7 @@
         <property name="minimumSize">
          <size>
           <width>32</width>
-          <height>0</height>
+          <height>23</height>
          </size>
         </property>
         <property name="font">
@@ -323,7 +495,7 @@
         <property name="minimumSize">
          <size>
           <width>32</width>
-          <height>0</height>
+          <height>23</height>
          </size>
         </property>
         <property name="font">
@@ -342,7 +514,7 @@
         <property name="minimumSize">
          <size>
           <width>32</width>
-          <height>0</height>
+          <height>23</height>
          </size>
         </property>
         <property name="font">
@@ -361,7 +533,7 @@
         <property name="minimumSize">
          <size>
           <width>32</width>
-          <height>0</height>
+          <height>23</height>
          </size>
         </property>
         <property name="font">
@@ -380,7 +552,7 @@
         <property name="minimumSize">
          <size>
           <width>0</width>
-          <height>0</height>
+          <height>23</height>
          </size>
         </property>
         <property name="font">
@@ -405,7 +577,7 @@
         <property name="minimumSize">
          <size>
           <width>0</width>
-          <height>0</height>
+          <height>23</height>
          </size>
         </property>
         <property name="font">
@@ -442,7 +614,7 @@
         <property name="minimumSize">
          <size>
           <width>0</width>
-          <height>0</height>
+          <height>23</height>
          </size>
         </property>
         <property name="font">
@@ -461,7 +633,7 @@
         <property name="minimumSize">
          <size>
           <width>0</width>
-          <height>0</height>
+          <height>23</height>
          </size>
         </property>
         <property name="font">
@@ -486,7 +658,7 @@
         <property name="minimumSize">
          <size>
           <width>0</width>
-          <height>0</height>
+          <height>23</height>
          </size>
         </property>
         <property name="font">
@@ -511,7 +683,7 @@
         <property name="minimumSize">
          <size>
           <width>0</width>
-          <height>0</height>
+          <height>23</height>
          </size>
         </property>
         <property name="font">
@@ -530,7 +702,7 @@
         <property name="minimumSize">
          <size>
           <width>32</width>
-          <height>0</height>
+          <height>23</height>
          </size>
         </property>
         <property name="text">
@@ -543,7 +715,7 @@
         <property name="minimumSize">
          <size>
           <width>32</width>
-          <height>0</height>
+          <height>23</height>
          </size>
         </property>
         <property name="text">
@@ -551,12 +723,12 @@
         </property>
        </widget>
       </item>
-      <item row="3" column="0">
+      <item row="2" column="0">
        <widget class="QLabel" name="label_operationNumber">
         <property name="minimumSize">
          <size>
           <width>0</width>
-          <height>0</height>
+          <height>23</height>
          </size>
         </property>
         <property name="font">
@@ -570,12 +742,12 @@
         </property>
        </widget>
       </item>
-      <item row="3" column="1" colspan="2">
+      <item row="2" column="1" colspan="2">
        <widget class="QSpinBox" name="spinBox_operationNumber">
         <property name="minimumSize">
          <size>
           <width>0</width>
-          <height>0</height>
+          <height>23</height>
          </size>
         </property>
         <property name="font">
@@ -592,50 +764,6 @@
         </property>
         <property name="value">
          <number>35</number>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="0">
-       <widget class="QLabel" name="label_product">
-        <property name="minimumSize">
-         <size>
-          <width>0</width>
-          <height>0</height>
-         </size>
-        </property>
-        <property name="font">
-         <font>
-          <weight>50</weight>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Изделие</string>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="1" colspan="2">
-       <widget class="QLineEdit" name="lineEdit_product">
-        <property name="minimumSize">
-         <size>
-          <width>0</width>
-          <height>0</height>
-         </size>
-        </property>
-        <property name="font">
-         <font>
-          <weight>50</weight>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>&quot;Велосипед&quot;</string>
-        </property>
-        <property name="cursorPosition">
-         <number>11</number>
-        </property>
-        <property name="readOnly">
-         <bool>true</bool>
         </property>
        </widget>
       </item>
@@ -659,7 +787,7 @@
         <property name="minimumSize">
          <size>
           <width>0</width>
-          <height>0</height>
+          <height>23</height>
          </size>
         </property>
         <property name="font">
@@ -678,7 +806,7 @@
         <property name="minimumSize">
          <size>
           <width>0</width>
-          <height>0</height>
+          <height>23</height>
          </size>
         </property>
         <property name="font">
@@ -697,7 +825,7 @@
         <property name="minimumSize">
          <size>
           <width>0</width>
-          <height>0</height>
+          <height>23</height>
          </size>
         </property>
         <property name="font">
@@ -722,7 +850,7 @@
         <property name="minimumSize">
          <size>
           <width>0</width>
-          <height>0</height>
+          <height>23</height>
          </size>
         </property>
         <property name="font">
@@ -747,7 +875,7 @@
         <property name="minimumSize">
          <size>
           <width>0</width>
-          <height>0</height>
+          <height>23</height>
          </size>
         </property>
         <property name="font">
@@ -766,7 +894,7 @@
         <property name="minimumSize">
          <size>
           <width>0</width>
-          <height>0</height>
+          <height>23</height>
          </size>
         </property>
         <property name="font">
@@ -785,7 +913,7 @@
         <property name="minimumSize">
          <size>
           <width>0</width>
-          <height>0</height>
+          <height>23</height>
          </size>
         </property>
         <property name="font">
@@ -810,7 +938,7 @@
         <property name="minimumSize">
          <size>
           <width>0</width>
-          <height>0</height>
+          <height>23</height>
          </size>
         </property>
         <property name="font">
@@ -835,7 +963,7 @@
         <property name="minimumSize">
          <size>
           <width>32</width>
-          <height>0</height>
+          <height>23</height>
          </size>
         </property>
         <property name="font">
@@ -854,7 +982,7 @@
         <property name="minimumSize">
          <size>
           <width>32</width>
-          <height>0</height>
+          <height>23</height>
          </size>
         </property>
         <property name="font">
@@ -873,7 +1001,7 @@
         <property name="minimumSize">
          <size>
           <width>32</width>
-          <height>0</height>
+          <height>23</height>
          </size>
         </property>
         <property name="font">
@@ -892,7 +1020,7 @@
         <property name="minimumSize">
          <size>
           <width>32</width>
-          <height>0</height>
+          <height>23</height>
          </size>
         </property>
         <property name="font">
@@ -1653,178 +1781,6 @@ p, li { white-space: pre-wrap; }
       </size>
      </property>
     </spacer>
-   </item>
-   <item row="4" column="1">
-    <widget class="QGroupBox" name="groupBox_completionDocument">
-     <property name="font">
-      <font>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="title">
-      <string>Завершение создания документа</string>
-     </property>
-     <layout class="QGridLayout" name="gridLayout_10">
-      <item row="1" column="1">
-       <widget class="QCheckBox" name="checkBox_doPrint">
-        <property name="font">
-         <font>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>распечатать после сохранения</string>
-        </property>
-        <property name="checked">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="0">
-       <widget class="QPushButton" name="pushButton_cancel">
-        <property name="minimumSize">
-         <size>
-          <width>0</width>
-          <height>32</height>
-         </size>
-        </property>
-        <property name="font">
-         <font>
-          <weight>50</weight>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Отменить</string>
-        </property>
-        <property name="icon">
-         <iconset resource="resources.qrc">
-          <normaloff>:/images/res/images/delete.png</normaloff>:/images/res/images/delete.png</iconset>
-        </property>
-        <property name="iconSize">
-         <size>
-          <width>24</width>
-          <height>24</height>
-         </size>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="1">
-       <widget class="QPushButton" name="pushButton_save">
-        <property name="minimumSize">
-         <size>
-          <width>0</width>
-          <height>32</height>
-         </size>
-        </property>
-        <property name="font">
-         <font>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Сохранить</string>
-        </property>
-        <property name="icon">
-         <iconset resource="resources.qrc">
-          <normaloff>:/images/res/images/save.png</normaloff>:/images/res/images/save.png</iconset>
-        </property>
-        <property name="iconSize">
-         <size>
-          <width>24</width>
-          <height>24</height>
-         </size>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="0" colspan="2">
-       <widget class="QGroupBox" name="groupBox_2">
-        <property name="title">
-         <string>Режим работы</string>
-        </property>
-        <property name="checkable">
-         <bool>false</bool>
-        </property>
-        <property name="checked">
-         <bool>false</bool>
-        </property>
-        <layout class="QGridLayout" name="gridLayout_8">
-         <item row="4" column="1">
-          <widget class="QPushButton" name="pushButton_importFromScaner">
-           <property name="enabled">
-            <bool>false</bool>
-           </property>
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>27</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>со сканера</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="0" colspan="2">
-          <widget class="Line" name="line_2">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="0">
-          <widget class="QPushButton" name="pushButton_importFromFile">
-           <property name="enabled">
-            <bool>false</bool>
-           </property>
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>27</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>из файла</string>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="0" colspan="2">
-          <widget class="QRadioButton" name="radioButton_importExistingDocument">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>27</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>Импорт существующего документа</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="0">
-          <widget class="QRadioButton" name="radioButton_createNewDocument">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>27</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>Создание нового документа</string>
-           </property>
-           <property name="checked">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-      </item>
-     </layout>
-    </widget>
    </item>
   </layout>
  </widget>
